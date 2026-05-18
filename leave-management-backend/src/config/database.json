@@ -1,0 +1,16 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "09280928",
+    "database": "leave_management",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "09280928",
+    "database": "leave_management",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
