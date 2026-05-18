@@ -58,7 +58,7 @@ const Dashboard: React.FC = () => {
       </div>
 
       
-      <div className="relative bg-[#00236f] rounded-[40px] shadow-2xl shadow-blue-900/20 p-8 md:p-12 mb-12 text-white overflow-hidden group">
+      <div className="relative bg-[#00236f]/80 backdrop-blur-2xl border border-blue-400/30 rounded-[40px] shadow-[0_8px_32px_0_rgba(0,35,111,0.3)] p-8 md:p-12 mb-12 text-white overflow-hidden group">
         
         <div className="absolute top-[-20%] right-[-10%] w-64 h-64 bg-blue-400/10 rounded-full blur-3xl group-hover:bg-blue-400/20 transition-all duration-700" />
         <div className="absolute bottom-[-10%] left-[5%] w-32 h-32 bg-indigo-400/10 rounded-full blur-2xl" />
@@ -96,12 +96,12 @@ const Dashboard: React.FC = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         {[
-          { title: 'Total Applications', value: stats.totalLeaves, icon: Calendar, color: 'bg-blue-50 text-blue-600 border-blue-100' },
-          { title: 'Awaiting Review', value: stats.pendingLeaves, icon: Clock, color: 'bg-amber-50 text-amber-600 border-amber-100' },
-          { title: 'Authorized', value: stats.approvedLeaves, icon: CheckCircle, color: 'bg-emerald-50 text-emerald-600 border-emerald-100' },
-          { title: 'Declined', value: stats.rejectedLeaves, icon: XCircle, color: 'bg-rose-50 text-rose-600 border-rose-100' }
+          { title: 'Total Applications', value: stats.totalLeaves, icon: Calendar, color: 'bg-blue-50/40 border-blue-200/50 text-blue-600' },
+          { title: 'Awaiting Review', value: stats.pendingLeaves, icon: Clock, color: 'bg-amber-50/40 border-amber-200/50 text-amber-600' },
+          { title: 'Authorized', value: stats.approvedLeaves, icon: CheckCircle, color: 'bg-emerald-50/40 border-emerald-200/50 text-emerald-600' },
+          { title: 'Declined', value: stats.rejectedLeaves, icon: XCircle, color: 'bg-rose-50/40 border-rose-200/50 text-rose-600' }
         ].map((stat) => (
-          <div key={stat.title} className={`p-6 rounded-[32px] border flex items-center justify-between shadow-sm hover:shadow-md transition-all group ${stat.color}`}>
+          <div key={stat.title} className={`p-6 rounded-[32px] border backdrop-blur-xl flex items-center justify-between shadow-[0_4px_20px_0_rgba(31,38,135,0.05)] hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.1)] transition-all group ${stat.color}`}>
             <div>
               <p className="text-[10px] font-black uppercase tracking-widest opacity-60 mb-1">{stat.title}</p>
               <p className="text-3xl font-bold tracking-tight" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{stat.value}</p>
@@ -116,7 +116,7 @@ const Dashboard: React.FC = () => {
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
         <div className="lg:col-span-2">
-          <div className="bg-white rounded-[40px] shadow-xl shadow-blue-900/5 p-2 border border-gray-50 overflow-hidden">
+          <div className="bg-white/40 backdrop-blur-2xl rounded-[40px] shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] p-2 border border-white/60 overflow-hidden">
             <div className="p-8 pb-0">
               <h3 className="text-xl font-bold text-[#00236f] uppercase tracking-widest" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Operational Calendar</h3>
             </div>
@@ -126,7 +126,7 @@ const Dashboard: React.FC = () => {
         
         <div className="space-y-6">
           
-          <div className="bg-white rounded-[40px] shadow-xl shadow-blue-900/5 p-8 border border-gray-50 relative overflow-hidden">
+          <div className="bg-white/40 backdrop-blur-2xl rounded-[40px] shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] p-8 border border-white/60 relative overflow-hidden">
             <div className="absolute top-0 right-0 p-4 opacity-5">
               <PlusCircle className="w-24 h-24 text-[#00236f]" />
             </div>
@@ -137,7 +137,7 @@ const Dashboard: React.FC = () => {
             <div className="flex flex-col space-y-4">
               <Button
                 onClick={() => navigate('/app/apply-leave')}
-                className="w-full bg-[#1e3a8a] hover:bg-[#00236f] text-white py-6 rounded-2xl font-bold shadow-lg shadow-blue-900/10 hover:shadow-xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 border-none text-xs uppercase tracking-widest"
+                className="w-full bg-[#1e3a8a]/80 backdrop-blur-md hover:bg-[#00236f]/90 text-white py-6 rounded-2xl font-bold shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all flex items-center justify-center gap-3 border border-blue-400/30 text-xs uppercase tracking-widest"
               >
                 <PlusCircle className="w-5 h-5" />
                 Draft Request
@@ -145,7 +145,7 @@ const Dashboard: React.FC = () => {
               
               <button
                 onClick={() => navigate('/app/my-leaves')}
-                className="w-full py-5 bg-gray-50 text-[#00236f] rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:bg-gray-100 transition-all border border-gray-100 flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full py-5 bg-white/40 backdrop-blur-md text-[#00236f] rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:bg-white/60 transition-all border border-white/60 shadow-[0_4px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Calendar className="w-4 h-4 opacity-40" />
                 History & Logs
@@ -154,7 +154,7 @@ const Dashboard: React.FC = () => {
               {(user?.role === 'manager' || user?.role === 'hr' || user?.role === 'admin') && (
                 <button
                   onClick={() => navigate('/app/approve-leaves')}
-                  className="w-full py-5 bg-[#00236f]/5 text-[#00236f] rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:bg-[#00236f]/10 transition-all border border-[#00236f]/10 flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-5 bg-white/40 backdrop-blur-md text-[#00236f] rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:bg-white/60 transition-all border border-white/60 shadow-[0_4px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <CheckCircle className="w-4 h-4 opacity-40" />
                   Approval Desk
@@ -171,7 +171,7 @@ const Dashboard: React.FC = () => {
           </div>
 
           
-          <div className="bg-white rounded-[40px] shadow-xl shadow-blue-900/5 p-8 border border-gray-50 relative overflow-hidden">
+          <div className="bg-white/40 backdrop-blur-2xl rounded-[40px] shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] p-8 border border-white/60 relative overflow-hidden">
             <h2 className="text-xl font-bold text-[#00236f] mb-6 flex items-center gap-3 uppercase tracking-widest" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
               🌴 OUT OF OFFICE TODAY
             </h2>

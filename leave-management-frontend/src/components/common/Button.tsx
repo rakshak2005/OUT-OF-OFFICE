@@ -16,10 +16,10 @@ const Button: React.FC<ButtonProps> = ({
   const baseStyles = 'font-semibold rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed';
 
   const variants = {
-    primary: 'bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800',
-    secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300 active:bg-gray-400',
-    danger: 'bg-red-600 text-white hover:bg-red-700 active:bg-red-800',
-    success: 'bg-green-600 text-white hover:bg-green-700 active:bg-green-800',
+    primary: 'bg-blue-600/80 backdrop-blur-md border border-blue-400/30 text-white shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:bg-blue-600/90 active:bg-blue-700/90',
+    secondary: 'bg-white/30 backdrop-blur-md border border-white/50 text-[#00236f] shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:bg-white/50 active:bg-white/60',
+    danger: 'bg-red-500/80 backdrop-blur-md border border-red-400/30 text-white shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:bg-red-500/90 active:bg-red-600/90',
+    success: 'bg-green-500/80 backdrop-blur-md border border-green-400/30 text-white shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:bg-green-500/90 active:bg-green-600/90',
   };
 
   const sizes = {

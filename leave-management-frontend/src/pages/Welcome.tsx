@@ -66,13 +66,13 @@ const Welcome: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 mb-20 w-full sm:w-auto">
             <Link to="/register" className="w-full sm:w-auto">
-              <Button className="w-full bg-[#1e3a8a] text-white hover:bg-[#00236f] font-bold px-8 py-4 rounded-xl shadow-lg shadow-blue-900/10 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 border-none text-sm">
+              <Button className="w-full bg-[#1e3a8a]/80 backdrop-blur-md hover:bg-[#00236f]/90 text-white px-8 py-4 rounded-xl font-bold shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 border border-blue-400/30 text-sm">
                 REGISTER
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
             <Link to="/login" className="w-full sm:w-auto">
-              <button className="w-full px-8 py-4 bg-[#d0e1fb]/50 text-[#1e3a8a] border border-[#1e3a8a]/5 rounded-xl font-bold text-sm hover:bg-[#d0e1fb] transition-all flex items-center justify-center gap-2">
+              <button className="w-full px-8 py-4 bg-white/40 backdrop-blur-md text-[#1e3a8a] border border-white/60 rounded-xl font-bold text-sm hover:bg-white/60 transition-all shadow-[0_4px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] flex items-center justify-center gap-2">
                 <PlayCircle className="w-4 h-4" />
                 SIGN IN
               </button>
@@ -82,7 +82,7 @@ const Welcome: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
             
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-left hover:shadow-xl transition-all duration-300 group">
+            <div className="bg-white/40 backdrop-blur-2xl p-8 rounded-[32px] shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] border border-white/50 text-left hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] transition-all duration-300 group">
               <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-teal-50 mb-6 group-hover:scale-110 transition-transform">
                 <Calendar className="w-5 h-5 text-teal-600" />
               </div>
@@ -93,7 +93,7 @@ const Welcome: React.FC = () => {
             </div>
 
             
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-left hover:shadow-xl transition-all duration-300 group">
+            <div className="bg-white/40 backdrop-blur-2xl p-8 rounded-[32px] shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] border border-white/50 text-left hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] transition-all duration-300 group">
               <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-indigo-50 mb-6 group-hover:scale-110 transition-transform">
                 <CheckCircle className="w-5 h-5 text-indigo-600" />
               </div>
@@ -104,7 +104,7 @@ const Welcome: React.FC = () => {
             </div>
 
             
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-left hover:shadow-xl transition-all duration-300 group">
+            <div className="bg-white/40 backdrop-blur-2xl p-8 rounded-[32px] shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] border border-white/50 text-left hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] transition-all duration-300 group">
               <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-blue-50 mb-6 group-hover:scale-110 transition-transform">
                 <CalendarDays className="w-5 h-5 text-blue-600" />
               </div>
@@ -115,7 +115,7 @@ const Welcome: React.FC = () => {
             </div>
 
             
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-left hover:shadow-xl transition-all duration-300 group">
+            <div className="bg-white/40 backdrop-blur-2xl p-8 rounded-[32px] shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] border border-white/50 text-left hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] transition-all duration-300 group">
               <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-red-50 mb-6 group-hover:scale-110 transition-transform">
                 <BarChart3 className="w-5 h-5 text-red-600" />
               </div>

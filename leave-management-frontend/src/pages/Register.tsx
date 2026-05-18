@@ -72,7 +72,7 @@ const Register: React.FC = () => {
       <div className="absolute inset-0 bg-[#faf8ff]/20 z-10" />
 
       <div className="relative z-20 w-full max-w-xl px-4 py-4 animate-in fade-in zoom-in duration-500">
-        <div className="bg-white/90 backdrop-blur-2xl p-8 md:p-10 rounded-[40px] shadow-2xl shadow-blue-900/10 border border-white relative overflow-hidden">
+        <div className="bg-white/40 backdrop-blur-2xl p-8 md:p-10 rounded-[40px] shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] border border-white/50 relative overflow-hidden">
           <div className="text-center mb-8 relative">
             <Link to="/" className="inline-flex items-center mb-6 group">
               <img 
@@ -188,7 +188,7 @@ const Register: React.FC = () => {
 
             <Button 
               type="submit" 
-              className="w-full bg-[#1e3a8a] hover:bg-[#00236f] text-white py-4 rounded-xl font-bold shadow-lg shadow-blue-900/10 hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 border-none text-xs uppercase tracking-widest mt-6" 
+              className="w-full bg-[#1e3a8a]/80 backdrop-blur-md hover:bg-[#00236f]/90 text-white py-4 rounded-xl font-bold shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 border border-blue-400/30 text-xs uppercase tracking-widest mt-6" 
               disabled={loading}
             >
               {loading ? (
