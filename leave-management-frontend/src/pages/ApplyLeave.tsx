@@ -4,7 +4,7 @@ import { leaveService } from '../services/leaveService';
 import { useAuthStore } from '../store/authStore';
 import { toast } from 'sonner';
 import { differenceInDays, parseISO } from 'date-fns';
-import { Info, Clock, ArrowRight } from 'lucide-react';
+import { Info, Clock, ArrowRight, Sparkles, Paperclip, X } from 'lucide-react';
 
 const ApplyLeave: React.FC = () => {
   const navigate = useNavigate();
@@ -213,7 +213,7 @@ const ApplyLeave: React.FC = () => {
                 }}
                 className="bg-blue-500/20 backdrop-blur-md hover:bg-blue-500/30 text-[#00236f] px-2.5 py-1 rounded-lg text-[9px] font-bold uppercase tracking-widest transition-all flex items-center gap-1 border border-blue-400/30 cursor-pointer shadow-[0_4px_12px_rgba(31,38,135,0.05)] hover:shadow-[0_4px_12px_rgba(31,38,135,0.1)]"
               >
-                <span>✨ AI Sentence Assist</span>
+                <span className="flex items-center gap-1"><Sparkles className="w-3 h-3" /> AI Sentence Assist</span>
               </button>
             </div>
             <textarea
@@ -260,7 +260,7 @@ const ApplyLeave: React.FC = () => {
                   disabled={aiLoading}
                   className="bg-blue-600/70 backdrop-blur-xl hover:bg-blue-600/80 text-white px-4 py-2 rounded-xl font-bold text-[9px] uppercase tracking-widest transition-all border border-white/30 cursor-pointer flex items-center gap-1.5 shadow-[0_8px_32px_0_rgba(31,38,135,0.2)] hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.3)] hover:-translate-y-0.5"
                 >
-                  {aiLoading ? 'Analyzing...' : '✨ Auto-Formulate'}
+                  {aiLoading ? 'Analyzing...' : <span className="flex items-center gap-1"><Sparkles className="w-3 h-3" /> Auto-Formulate</span>}
                 </button>
               </div>
 
@@ -310,7 +310,7 @@ const ApplyLeave: React.FC = () => {
                   className="hidden"
                 />
                 <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest text-center">
-                  {fileData ? `📎 ${fileData.documentName}` : 'Select Document (PDF, JPEG, PNG...)'}
+                  {fileData ? <span className="flex items-center justify-center gap-1"><Paperclip className="w-3 h-3" /> {fileData.documentName}</span> : 'Select Document (PDF, JPEG, PNG...)'}
                 </span>
               </label>
               {fileData && (
@@ -320,7 +320,7 @@ const ApplyLeave: React.FC = () => {
                   className="bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold px-4 py-4 rounded-2xl text-xs transition-all border-none cursor-pointer"
                   title="Remove attachment"
                 >
-                  ✕
+                  <X className="w-4 h-4" />
                 </button>
               )}
             </div>

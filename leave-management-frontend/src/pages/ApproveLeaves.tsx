@@ -3,7 +3,7 @@ import { leaveService } from '../services/leaveService';
 import type { Leave } from '../types';
 import { format } from 'date-fns';
 import { toast } from 'sonner';
-import { ArrowUpDown } from 'lucide-react';
+import { ArrowUpDown, Paperclip } from 'lucide-react';
 
 const ApproveLeaves: React.FC = () => {
   const [leaves, setLeaves] = useState<Leave[]>([]);
@@ -217,7 +217,7 @@ const ApproveLeaves: React.FC = () => {
                     <div className="bg-[#dce1ff]/20 border border-[#00236f]/5 p-5 rounded-3xl mb-10 flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         <div className="bg-white p-2.5 rounded-xl text-[#00236f] shadow-sm">
-                          <span>📎</span>
+                          <Paperclip className="w-5 h-5" />
                         </div>
                         <div>
                           <span className="text-[8px] font-black uppercase tracking-widest text-[#00236f]/60 block mb-0.5">Supporting Document</span>

@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../components/common/Navbar';
 import api from '../services/api';
-import { MessageSquare, Send, X, Bot, Sparkles, Database, Trash2, ArrowRight } from 'lucide-react';
+import { MessageSquare, Send, X, Bot, Sparkles, Database, Trash2, ArrowRight, Palmtree, Monitor, Calendar, Briefcase, ChevronRight, Circle } from 'lucide-react';
 import { toast } from 'sonner';
 
 interface ChatMessage {
@@ -52,7 +52,7 @@ const MainLayout: React.FC = () => {
     } catch (error: any) {
       const errorMsg: ChatMessage = {
         sender: 'bot',
-        text: '⚠️ **Connection Error:** Failed to query the database. Please verify your connection status and try again.',
+        text: '**Connection Error:** Failed to query the database. Please verify your connection status and try again.',
         timestamp: new Date()
       };
       setMessages(prev => [...prev, errorMsg]);
@@ -80,7 +80,7 @@ const MainLayout: React.FC = () => {
       if (line.startsWith('### ')) {
         return (
           <h4 key={index} className="text-xs font-black text-[#00236f] uppercase tracking-wider mt-4 mb-1.5 flex items-center gap-1">
-            <span>🔹</span> {line.replace('### ', '')}
+            <ChevronRight className="w-3 h-3 text-[#00236f]" /> {line.replace('### ', '')}
           </h4>
         );
       }
@@ -111,10 +111,10 @@ const MainLayout: React.FC = () => {
   };
 
   const suggestedQuestions = [
-    { text: 'Who is on leave today?', icon: '🌴' },
-    { text: 'Who is out from IT team?', icon: '💻' },
-    { text: 'Plan me next long weekend', icon: '📅' },
-    { text: 'What is my leave balance?', icon: '💼' }
+    { text: 'Who is on leave today?', icon: <Palmtree className="w-4 h-4" /> },
+    { text: 'Who is out from IT team?', icon: <Monitor className="w-4 h-4" /> },
+    { text: 'Plan me next long weekend', icon: <Calendar className="w-4 h-4" /> },
+    { text: 'What is my leave balance?', icon: <Briefcase className="w-4 h-4" /> }
   ];
 
   return (
@@ -149,8 +149,8 @@ const MainLayout: React.FC = () => {
             
             <div className="bg-[#00236f] p-6 text-white flex justify-between items-center shadow-lg">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center text-lg shadow-inner">
-                  🤖
+                <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center shadow-inner text-white">
+                  <Bot className="w-5 h-5" />
                 </div>
                 <div>
                   <h3 className="text-md font-bold tracking-wider uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
@@ -158,7 +158,7 @@ const MainLayout: React.FC = () => {
                   </h3>
                   <div className="flex items-center gap-1 opacity-60">
                     <Database className="w-2.5 h-2.5 text-emerald-400" />
-                    <span className="text-[8px] font-black uppercase tracking-widest text-emerald-400">Connected to DB 🟢</span>
+                    <span className="text-[8px] font-black uppercase tracking-widest text-emerald-400 flex items-center gap-1">Connected to DB <Circle className="w-2 h-2 fill-emerald-400" /></span>
                   </div>
                 </div>
               </div>
@@ -247,8 +247,8 @@ const MainLayout: React.FC = () => {
               
               {loading && (
                 <div className="flex justify-start items-center gap-2 animate-pulse pl-2">
-                  <div className="w-8 h-8 bg-white border border-gray-100 rounded-xl flex items-center justify-center text-xs">
-                    🤖
+                  <div className="w-8 h-8 bg-white border border-gray-100 rounded-xl flex items-center justify-center text-[#00236f]">
+                    <Bot className="w-4 h-4" />
                   </div>
                   <div className="bg-white border border-gray-100 px-4 py-3 rounded-2xl rounded-tl-none flex items-center gap-1.5 shadow-sm">
                     <span className="w-1.5 h-1.5 bg-[#00236f] rounded-full animate-bounce delay-75" />

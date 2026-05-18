@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { leaveService } from '../services/leaveService';
 import type { Leave } from '../types';
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, isSameDay, addMonths, subMonths, isWithinInterval } from 'date-fns';
-import { ChevronLeft, ChevronRight, Users } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Users, ClipboardList, Circle } from 'lucide-react';
 
 const TeamCalendar: React.FC = () => {
   const [leaves, setLeaves] = useState<Leave[]>([]);
@@ -234,12 +234,12 @@ const TeamCalendar: React.FC = () => {
           <div className="bg-white rounded-[40px] shadow-xl shadow-blue-900/5 p-8 border border-gray-50 relative overflow-hidden h-full flex flex-col justify-between">
             <div>
               <h2 className="text-xl font-bold text-[#00236f] mb-6 flex items-center gap-3 uppercase tracking-widest" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-                📋 UPCOMING ABSENCES
+                <ClipboardList className="w-6 h-6 text-[#00236f]" /> UPCOMING ABSENCES
               </h2>
 
               {upcomingAbsences.length === 0 ? (
                 <div className="p-6 bg-emerald-50/50 border border-emerald-100 rounded-3xl flex items-center gap-3">
-                  <span className="text-emerald-500 animate-pulse text-xs">🟢</span>
+                  <Circle className="w-4 h-4 text-emerald-500 animate-pulse fill-emerald-500" />
                   <div>
                     <span className="text-[8px] font-black uppercase tracking-widest text-[#065f46] block mb-0.5">Status: Operational</span>
                     <p className="text-[10px] font-bold text-[#065f46] uppercase leading-snug">All personnel present for the planning cycle</p>

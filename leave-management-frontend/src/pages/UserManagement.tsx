@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthStore } from '../store/authStore';
 import api from '../services/api';
-import { Users, Trash2, FileText, X, History } from 'lucide-react';
+import { Users, Trash2, FileText, X, History, Plus, Palmtree, Crown, Settings, Key, ClipboardList, Lock } from 'lucide-react';
 import { toast } from 'sonner';
 import { format } from 'date-fns';
 
@@ -273,7 +273,7 @@ const UserManagement: React.FC = () => {
           onClick={() => setShowAddModal(true)}
           className="bg-[#00236f] hover:bg-[#1e3a8a] text-white px-6 py-3.5 rounded-2xl font-bold text-[10px] uppercase tracking-widest transition-all cursor-pointer border-none shadow-xl shadow-blue-900/10 flex items-center gap-2 active:scale-95 shrink-0"
         >
-          <span>➕</span> Add New Personnel
+          <Plus className="w-4 h-4" /> Add New Personnel
         </button>
       </div>
 
@@ -282,7 +282,7 @@ const UserManagement: React.FC = () => {
         {departments.map((dept) => (
           <div key={dept} className="bg-white rounded-[40px] shadow-xl shadow-blue-900/5 p-8 border border-gray-50">
             <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
-              <span className="text-xl">🌴</span>
+              <Palmtree className="w-6 h-6 text-emerald-500" />
               <h2 className="text-2xl font-black text-[#00236f] uppercase tracking-widest" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                 {dept} Segment ({groupedUsers[dept].length})
               </h2>
@@ -294,8 +294,8 @@ const UserManagement: React.FC = () => {
                   
                   
                   {u.role !== 'employee' && (
-                    <div className="absolute top-0 right-0 bg-[#00236f] text-white font-black text-[7px] uppercase tracking-widest px-3.5 py-1 rounded-bl-xl shadow-sm">
-                      👑 {u.role}
+                    <div className="absolute top-0 right-0 bg-[#00236f] text-white font-black text-[7px] uppercase tracking-widest px-3.5 py-1 rounded-bl-xl shadow-sm flex items-center gap-1">
+                      <Crown className="w-2.5 h-2.5" /> {u.role}
                     </div>
                   )}
 
@@ -390,7 +390,7 @@ const UserManagement: React.FC = () => {
               
               <div className="bg-white rounded-[32px] border border-gray-100 p-8 shadow-sm mb-8 relative overflow-hidden">
                 <h3 className="text-xs font-black text-[#00236f] uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
-                  <span>⚙️</span> ADJUST LEAVE BALANCE ALLOCATION
+                  <Settings className="w-4 h-4" /> ADJUST LEAVE BALANCE ALLOCATION
                 </h3>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
@@ -446,7 +446,7 @@ const UserManagement: React.FC = () => {
               
               <div className="bg-white rounded-[32px] border border-gray-100 p-8 shadow-sm mb-8 relative overflow-hidden">
                 <h3 className="text-xs font-black text-rose-600 uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
-                  <span>🔑</span> RESET ACCOUNT PASSWORD
+                  <Key className="w-4 h-4" /> RESET ACCOUNT PASSWORD
                 </h3>
                 
                 <div className="flex flex-col md:flex-row items-end gap-6">
@@ -473,7 +473,7 @@ const UserManagement: React.FC = () => {
 
               
               <h3 className="text-xs font-black text-[#00236f] uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
-                <span>📋</span> LEAVE HISTORY LOGS
+                <ClipboardList className="w-4 h-4" /> LEAVE HISTORY LOGS
               </h3>
 
               {historyLoading ? (
@@ -527,8 +527,8 @@ const UserManagement: React.FC = () => {
                                   Cancel Leave
                                 </button>
                               ) : (
-                                <span className="text-[7px] font-black text-gray-400 uppercase tracking-widest bg-gray-100 px-2 py-1 rounded border border-gray-200 select-none">
-                                  🔒 Locked (3d)
+                                <span className="flex items-center gap-1 text-[7px] font-black text-gray-400 uppercase tracking-widest bg-gray-100 px-2 py-1 rounded border border-gray-200 select-none">
+                                  <Lock className="w-2 h-2" /> Locked (3d)
                                 </span>
                               )}
                             </>
@@ -561,7 +561,7 @@ const UserManagement: React.FC = () => {
             <div className="bg-[#00236f] p-8 flex justify-between items-center text-white">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-xl font-bold">
-                  ➕
+                  <Plus className="w-6 h-6" />
                 </div>
                 <div>
                   <h2 className="text-3xl font-bold uppercase tracking-widest" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>

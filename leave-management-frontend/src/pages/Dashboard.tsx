@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
 import { leaveService } from '../services/leaveService';
 import DashboardCalendar from '../components/dashboard/DashboardCalendar';
-import { Calendar, Clock, CheckCircle, XCircle, PlusCircle } from 'lucide-react';
+import { Calendar, Clock, CheckCircle, XCircle, PlusCircle, Palmtree, Circle } from 'lucide-react';
 import Button from '../components/common/Button';
 import type { LeaveStats, Leave } from '../types';
 
@@ -173,7 +173,7 @@ const Dashboard: React.FC = () => {
           
           <div className="bg-white/40 backdrop-blur-2xl rounded-[40px] shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] p-8 border border-white/60 relative overflow-hidden">
             <h2 className="text-xl font-bold text-[#00236f] mb-6 flex items-center gap-3 uppercase tracking-widest" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-              🌴 OUT OF OFFICE TODAY
+              <Palmtree className="w-6 h-6 text-emerald-500" /> OUT OF OFFICE TODAY
             </h2>
             
             {absencesLoading ? (
@@ -183,7 +183,7 @@ const Dashboard: React.FC = () => {
               </div>
             ) : activeAbsences.length === 0 ? (
               <div className="p-5 bg-emerald-50/50 border border-emerald-100/50 rounded-3xl flex items-center gap-3">
-                <span className="text-emerald-500 animate-pulse text-xs">🟢</span>
+                <Circle className="w-4 h-4 text-emerald-500 animate-pulse fill-emerald-500" />
                 <div>
                   <span className="text-[8px] font-black uppercase tracking-widest text-[#065f46] block mb-0.5">Status: All Present</span>
                   <p className="text-[10px] font-bold text-[#065f46] uppercase">No active absences today</p>

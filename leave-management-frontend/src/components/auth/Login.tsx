@@ -23,7 +23,7 @@ const Login: React.FC = () => {
     try {
       const user = await authService.login({ email, password });
       setUser(user);
-      toast.success(`Welcome back, ${user.firstName}! 👋`);
+      toast.success(`Welcome back, ${user.firstName}!`);
       
       if (['manager', 'hr', 'admin'].includes(user.role)) {
         navigate('/app/approve-leaves');

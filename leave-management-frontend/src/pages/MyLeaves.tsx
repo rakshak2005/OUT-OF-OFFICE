@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { leaveService } from '../services/leaveService';
 import type { Leave } from '../types';
 import { format } from 'date-fns';
-import { Clock, CheckCircle, XCircle, Calendar, Shield } from 'lucide-react';
+import { Clock, CheckCircle, XCircle, Calendar, Shield, Paperclip } from 'lucide-react';
 import { toast } from 'sonner';
 
 const MyLeaves: React.FC = () => {
@@ -153,7 +153,7 @@ const MyLeaves: React.FC = () => {
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-[#00236f] bg-[#dce1ff]/50 px-3 py-1.5 rounded-lg hover:bg-[#dce1ff] transition-all"
                         >
-                          <span>📎 Attached File</span>
+                          <span className="flex items-center gap-1"><Paperclip className="w-3 h-3" /> Attached File</span>
                         </a>
                       </div>
                     )}
