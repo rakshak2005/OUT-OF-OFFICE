@@ -63,7 +63,7 @@ const Login: React.FC = () => {
               />
             </Link>
             
-            <h1 className="text-4xl font-bold text-[#00236f] mb-2 uppercase tracking-tight" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Welcome Back</h1>
+            <h1 className="text-4xl font-bold text-[#00236f] mb-2 uppercase tracking-tight font-bebas">Welcome Back</h1>
             <p className="text-sm font-medium text-gray-500">Access your executive leave dashboard</p>
           </div>
 

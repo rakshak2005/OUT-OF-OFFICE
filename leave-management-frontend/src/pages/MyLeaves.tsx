@@ -92,7 +92,7 @@ const MyLeaves: React.FC = () => {
       <div className="mb-12">
         <div className="flex items-center gap-3 mb-2">
           <div className="w-2 h-8 bg-[#00236f] rounded-full" />
-          <h1 className="text-5xl font-bold text-[#00236f] uppercase tracking-tight" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h1 className="text-5xl font-bold text-[#00236f] uppercase tracking-tight font-bebas">
             APPLICATION LOGS
           </h1>
         </div>
@@ -131,7 +131,7 @@ const MyLeaves: React.FC = () => {
                   
                   <div>
                     <div className="flex items-center gap-3 mb-1">
-                      <h3 className="text-xl font-bold text-[#00236f] uppercase tracking-wider" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                      <h3 className="text-xl font-bold text-[#00236f] uppercase tracking-wider font-bebas">
                         {typeof leave.leaveType === 'string' ? leave.leaveType : leave.leaveType?.name} LEAVE
                       </h3>
                       <div className="w-1 h-1 bg-gray-300 rounded-full" />

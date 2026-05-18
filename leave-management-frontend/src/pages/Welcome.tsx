@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, CheckCircle, CalendarDays, BarChart3, ArrowRight, PlayCircle } from 'lucide-react';
+import { Calendar, CheckCircle, CalendarDays, BarChart3, ArrowRight, LogIn } from 'lucide-react';
 import Button from '../components/common/Button';
 import heroImage from '../components/images/empty-well-equipped-business-office-with-computers-used-recruitment-process.jpg';
 import logoImg from '../components/images/OOOlogo.jpeg';
@@ -20,7 +20,7 @@ const Welcome: React.FC = () => {
           </Link>
           
           <nav className="hidden md:flex gap-6 items-center">
-            <Link to="#" className="text-[#00236f] font-bold border-b-2 border-[#00236f] py-0.5 text-xs tracking-wide">Platform</Link>
+            <Link to="#" className="text-[#00236f] font-bold border-b-2 border-[#00236f] py-0.5 text-xs tracking-wide uppercase">PLATFORM</Link>
             <Link to="#" className="text-[#444651] hover:text-[#00236f] transition-colors text-xs font-bold uppercase tracking-wider">Solutions</Link>
             <Link to="#" className="text-[#444651] hover:text-[#00236f] transition-colors text-xs font-bold uppercase tracking-wider">Contact Us</Link>
             <Link to="#" className="text-[#444651] hover:text-[#00236f] transition-colors text-xs font-bold uppercase tracking-wider">Support</Link>
@@ -45,16 +45,14 @@ const Welcome: React.FC = () => {
       <main className="pt-16 pb-12">
         
         <section className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col items-center text-center py-8 lg:py-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#dce1ff] text-[#00236f] rounded-full mb-6 animate-fade-in border border-blue-200/50">
-            <span className="text-[9px] font-black uppercase tracking-[0.2em]">New Features Available</span>
-          </div>
 
-          <div className="flex flex-col items-center mb-6" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+
+          <div className="flex flex-col items-center mb-6 font-bebas">
             <span className="text-[70px] md:text-[90px] leading-none font-bold text-[#00236f] tracking-widest drop-shadow-sm select-none">O.O.O</span>
             <span className="text-xs tracking-[0.6em] pl-[0.6em] text-[#444651] font-medium mt-1 uppercase text-center opacity-60">Out of Office</span>
           </div>
 
-          <h1 className="mb-6 max-w-xl" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h1 className="mb-6 max-w-xl font-bebas">
             <span className="block text-3xl md:text-4xl font-bold tracking-[0.15em] text-[#00236f] uppercase leading-none">
               Simplify Leave Management
             </span>
@@ -73,7 +71,7 @@ const Welcome: React.FC = () => {
             </Link>
             <Link to="/login" className="w-full sm:w-auto">
               <button className="w-full px-8 py-4 bg-white/50 backdrop-blur-xl text-[#00236f] border border-white/60 rounded-xl font-bold text-sm hover:bg-white/70 transition-all shadow-[0_8px_32px_0_rgba(31,38,135,0.1)] hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] hover:-translate-y-0.5 flex items-center justify-center gap-2">
-                <PlayCircle className="w-4 h-4" />
+                <LogIn className="w-4 h-4" />
                 SIGN IN
               </button>
             </Link>
@@ -137,10 +135,8 @@ const Welcome: React.FC = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#00236f]/90 via-[#00236f]/30 to-transparent flex items-end p-8 md:p-12">
               <div className="text-white max-w-xl">
-                <span className="text-[9px] font-black bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full mb-4 inline-block uppercase tracking-widest border border-white/5">
-                  Trusted by 500+ Companies
-                </span>
-                <h2 className="text-3xl md:text-4xl font-bold mb-3 leading-tight tracking-widest uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Experience Clarity in HR Operations</h2>
+
+                <h2 className="text-3xl md:text-4xl font-bold mb-3 leading-tight tracking-widest uppercase font-bebas">Experience Clarity in HR Operations</h2>
                 <p className="text-sm md:text-base font-medium opacity-80 leading-relaxed max-w-lg">
                   Our platform integrates seamlessly with your existing tools, providing a single source of truth for all employee absence management.
                 </p>
@@ -155,7 +151,7 @@ const Welcome: React.FC = () => {
         <div className="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
           <span className="font-black text-2xl text-[#00236f] tracking-tighter">OOO</span>
           <p className="text-[10px] font-bold text-[#444651] opacity-40 uppercase tracking-widest">
-            © 2024 OOO Leave Management. All rights reserved.
+            © 2026 | Team Fantastic Four | Zen Blaze
           </p>
         </div>
         <nav className="flex flex-wrap justify-center gap-6 md:gap-10">

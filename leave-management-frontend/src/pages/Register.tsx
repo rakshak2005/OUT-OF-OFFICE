@@ -82,7 +82,7 @@ const Register: React.FC = () => {
               />
             </Link>
             
-            <h1 className="text-3xl font-bold text-[#00236f] mb-1 uppercase tracking-tight" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Join the Team</h1>
+            <h1 className="text-3xl font-bold text-[#00236f] mb-1 uppercase tracking-tight font-bebas">Join the Team</h1>
             <p className="text-xs font-medium text-gray-500">Create your employee account below</p>
           </div>
 

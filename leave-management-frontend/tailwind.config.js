@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Archivo', 'sans-serif'],
+        bebas: ['"Bebas Neue"', 'sans-serif'],
+      },
       colors: {
         primary: {
           50: '#eff6ff',

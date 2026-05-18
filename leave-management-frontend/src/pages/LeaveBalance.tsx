@@ -51,7 +51,7 @@ const LeaveBalance: React.FC = () => {
       <div className="mb-12">
         <div className="flex items-center gap-3 mb-2">
           <div className="w-2 h-8 bg-[#00236f] rounded-full" />
-          <h1 className="text-5xl font-bold text-[#00236f] uppercase tracking-tight" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h1 className="text-5xl font-bold text-[#00236f] uppercase tracking-tight font-bebas">
             RESOURCE QUOTA
           </h1>
         </div>
@@ -75,7 +75,7 @@ const LeaveBalance: React.FC = () => {
                         <BarChart3 className="w-6 h-6" />
                       </div>
                       <div>
-                        <h2 className="text-2xl font-bold text-[#00236f] uppercase tracking-wider" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{leave.type} LEAVE</h2>
+                        <h2 className="text-2xl font-bold text-[#00236f] uppercase tracking-wider font-bebas">{leave.type} LEAVE</h2>
                         <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Active Entitlement</span>
                       </div>
                     </div>
@@ -83,15 +83,15 @@ const LeaveBalance: React.FC = () => {
                     <div className="flex items-center gap-10">
                       <div className="text-center">
                         <p className="text-[9px] font-black uppercase tracking-widest text-gray-400 mb-1">Allocated</p>
-                        <p className="text-3xl font-bold text-[#00236f]" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{leave.allocated}</p>
+                        <p className="text-3xl font-bold text-[#00236f] font-bebas">{leave.allocated}</p>
                       </div>
                       <div className="text-center">
                         <p className="text-[9px] font-black uppercase tracking-widest text-gray-400 mb-1">Used</p>
-                        <p className="text-3xl font-bold text-rose-500" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{leave.used}</p>
+                        <p className="text-3xl font-bold text-rose-500 font-bebas">{leave.used}</p>
                       </div>
                       <div className="text-center">
                         <p className="text-[9px] font-black uppercase tracking-widest text-gray-400 mb-1">Remaining</p>
-                        <p className="text-3xl font-bold text-emerald-500" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{leave.remaining}</p>
+                        <p className="text-3xl font-bold text-emerald-500 font-bebas">{leave.remaining}</p>
                       </div>
                     </div>
                   </div>

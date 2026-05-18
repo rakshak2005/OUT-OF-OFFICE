@@ -153,7 +153,7 @@ const MainLayout: React.FC = () => {
                   <Bot className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-md font-bold tracking-wider uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                  <h3 className="text-md font-bold tracking-wider uppercase font-bebas">
                     OOO Assistant
                   </h3>
                   <div className="flex items-center gap-1 opacity-60">

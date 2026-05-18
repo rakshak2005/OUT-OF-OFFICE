@@ -108,7 +108,7 @@ const LeaveReport: React.FC = () => {
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-1.5 h-6 bg-[#00236f] rounded-full" />
-                <span className="text-2xl font-black text-[#00236f] tracking-tighter uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                <span className="text-2xl font-black text-[#00236f] tracking-tighter uppercase font-bebas">
                   OOO PORTAL
                 </span>
               </div>
@@ -125,13 +125,13 @@ const LeaveReport: React.FC = () => {
           </div>
 
           <div className="mb-10 text-center relative">
-            <h1 className="text-4xl font-bold text-[#00236f] uppercase tracking-tight mb-2" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+            <h1 className="text-4xl font-bold text-[#00236f] uppercase tracking-tight mb-2 font-bebas">
               ABSENCE DIRECTIVE REPORT
             </h1>
             <p className="text-[9px] font-black text-gray-400 uppercase tracking-widest">Approved leave directive details & administrative audit logs</p>
             
             
-            <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] border-4 border-emerald-500/20 text-emerald-500/10 rounded-3xl p-6 text-7xl font-black uppercase tracking-widest rotate-[-12deg] pointer-events-none select-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+            <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] border-4 border-emerald-500/20 text-emerald-500/10 rounded-3xl p-6 text-7xl font-black uppercase tracking-widest rotate-[-12deg] pointer-events-none select-none font-bebas">
               AUTHORIZED
             </div>
           </div>

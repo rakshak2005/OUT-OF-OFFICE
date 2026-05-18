@@ -85,7 +85,7 @@ const HolidayCalendar: React.FC = () => {
         <div>
           <div className="flex items-center gap-3 mb-2">
             <div className="w-2 h-8 bg-[#00236f] rounded-full" />
-            <h1 className="text-5xl font-bold text-[#00236f] uppercase tracking-tight" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+            <h1 className="text-5xl font-bold text-[#00236f] uppercase tracking-tight font-bebas">
               ANNUAL CALENDAR
             </h1>
           </div>
@@ -117,7 +117,7 @@ const HolidayCalendar: React.FC = () => {
       {showForm && (user?.role === 'admin' || user?.role === 'manager') && (
         <div className="mb-12 animate-in fade-in slide-in-from-top-4 duration-500">
           <div className="bg-white rounded-[40px] shadow-2xl shadow-blue-900/5 p-10 border border-gray-50">
-            <h3 className="text-xl font-bold text-[#00236f] mb-8 uppercase tracking-widest" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>New Calendar Entry</h3>
+            <h3 className="text-xl font-bold text-[#00236f] mb-8 uppercase tracking-widest font-bebas">New Calendar Entry</h3>
             <form onSubmit={handleAddHoliday}>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="space-y-1">
@@ -176,7 +176,7 @@ const HolidayCalendar: React.FC = () => {
             return (
               <div key={month.index} className="flex flex-col">
                 <div className="mb-6 flex items-center justify-between px-2">
-                  <h2 className="text-2xl font-bold text-[#00236f] uppercase tracking-wider" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{month.name}</h2>
+                  <h2 className="text-2xl font-bold text-[#00236f] uppercase tracking-wider font-bebas">{month.name}</h2>
                   <span className="text-[8px] font-black bg-[#00236f]/5 text-[#00236f] px-3 py-1.5 rounded-full tracking-widest">
                     {monthHolidays.length} {monthHolidays.length === 1 ? 'EVENT' : 'EVENTS'}
                   </span>

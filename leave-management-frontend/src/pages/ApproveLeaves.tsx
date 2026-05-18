@@ -104,7 +104,7 @@ const ApproveLeaves: React.FC = () => {
         <div>
           <div className="flex items-center gap-3 mb-2">
             <div className="w-2 h-8 bg-[#00236f] rounded-full" />
-            <h1 className="text-5xl font-bold text-[#00236f] uppercase tracking-tight" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+            <h1 className="text-5xl font-bold text-[#00236f] uppercase tracking-tight font-bebas">
               APPROVAL DESK
             </h1>
           </div>
@@ -146,10 +146,10 @@ const ApproveLeaves: React.FC = () => {
                 
                 <div className="lg:w-80 bg-gray-50/50 p-8 border-r border-gray-50">
                   <div className="text-center lg:text-left mb-8">
-                    <div className="w-20 h-20 bg-[#00236f] rounded-3xl flex items-center justify-center text-white text-3xl font-bold mx-auto lg:mx-0 mb-4 shadow-lg shadow-blue-900/20" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                    <div className="w-20 h-20 bg-[#00236f] rounded-3xl flex items-center justify-center text-white text-3xl font-bold mx-auto lg:mx-0 mb-4 shadow-lg shadow-blue-900/20 font-bebas">
                       {leave.applicant?.firstName.charAt(0)}{leave.applicant?.lastName.charAt(0)}
                     </div>
-                    <h3 className="text-xl font-bold text-[#00236f] uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                    <h3 className="text-xl font-bold text-[#00236f] uppercase tracking-wide font-bebas">
                       {leave.applicant?.firstName} {leave.applicant?.lastName}
                     </h3>
                     <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mt-1">{leave.applicant?.department}</p>
@@ -193,7 +193,7 @@ const ApproveLeaves: React.FC = () => {
                       <div className="flex items-center gap-4 mt-4">
                         <div className="text-center">
                           <p className="text-[8px] font-black text-gray-400 uppercase tracking-widest mb-1">Duration</p>
-                          <p className="text-2xl font-bold text-[#00236f]" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{leave.days || leave.totalDays} DAYS</p>
+                          <p className="text-2xl font-bold text-[#00236f] font-bebas">{leave.days || leave.totalDays} DAYS</p>
                         </div>
                         <div className="h-8 w-px bg-gray-100" />
                         <div className="text-center">
