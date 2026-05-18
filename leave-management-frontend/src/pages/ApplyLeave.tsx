@@ -113,7 +113,7 @@ const ApplyLeave: React.FC = () => {
       <div className="mb-8">
         <div className="flex items-center gap-2.5 mb-1.5">
           <div className="w-1.5 h-6 bg-[#00236f] rounded-full" />
-          <h1 className="text-3xl font-bold text-[#00236f] uppercase tracking-tight" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h1 className="text-3xl font-bold text-[#00236f] uppercase tracking-tight font-bebas">
             LEAVE APPLICATION
           </h1>
         </div>

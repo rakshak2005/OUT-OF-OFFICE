@@ -50,7 +50,7 @@ const Dashboard: React.FC = () => {
       <div className="mb-12">
         <div className="flex items-center gap-3 mb-2">
           <div className="w-2 h-8 bg-[#00236f] rounded-full" />
-          <h1 className="text-5xl font-bold text-[#00236f] uppercase tracking-tight" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h1 className="text-5xl font-bold text-[#00236f] uppercase tracking-tight font-bebas">
             EXECUTIVE DASHBOARD
           </h1>
         </div>
@@ -67,7 +67,7 @@ const Dashboard: React.FC = () => {
           <div className="flex justify-between items-start mb-10">
             <div>
               <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-200/60 mb-2">Resource Allocation</h2>
-              <p className="text-3xl font-bold uppercase tracking-widest" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Leave Balance Summary</p>
+              <p className="text-3xl font-bold uppercase tracking-widest font-bebas">Leave Balance Summary</p>
             </div>
             <div className="px-4 py-2 bg-white/10 backdrop-blur-md rounded-xl border border-white/10">
               <span className="text-[10px] font-black uppercase tracking-widest text-blue-100">FY 2024-25</span>
@@ -84,7 +84,7 @@ const Dashboard: React.FC = () => {
               <div key={item.label} className="flex flex-col">
                 <span className="text-[9px] font-black uppercase tracking-widest text-blue-200/50 mb-3">{item.label}</span>
                 <div className="flex items-baseline gap-2">
-                  <span className={`text-5xl font-bold ${item.color}`} style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{item.value}</span>
+                  <span className={`text-5xl font-bold ${item.color} font-bebas`}>{item.value}</span>
                   <span className="text-[10px] font-bold opacity-30 uppercase tracking-tighter">Days</span>
                 </div>
               </div>
@@ -104,7 +104,7 @@ const Dashboard: React.FC = () => {
           <div key={stat.title} className={`p-6 rounded-[32px] border backdrop-blur-xl flex items-center justify-between shadow-[0_4px_20px_0_rgba(31,38,135,0.05)] hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.1)] transition-all group ${stat.color}`}>
             <div>
               <p className="text-[10px] font-black uppercase tracking-widest opacity-60 mb-1">{stat.title}</p>
-              <p className="text-3xl font-bold tracking-tight" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{stat.value}</p>
+              <p className="text-3xl font-bold tracking-tight font-bebas">{stat.value}</p>
             </div>
             <div className="p-3 rounded-2xl bg-white shadow-sm group-hover:scale-110 transition-transform">
               <stat.icon className="w-5 h-5" />
@@ -118,7 +118,7 @@ const Dashboard: React.FC = () => {
         <div className="lg:col-span-2">
           <div className="bg-white/40 backdrop-blur-2xl rounded-[40px] shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] p-2 border border-white/60 overflow-hidden">
             <div className="p-8 pb-0">
-              <h3 className="text-xl font-bold text-[#00236f] uppercase tracking-widest" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Operational Calendar</h3>
+              <h3 className="text-xl font-bold text-[#00236f] uppercase tracking-widest font-bebas">Operational Calendar</h3>
             </div>
             <DashboardCalendar />
           </div>
@@ -131,7 +131,7 @@ const Dashboard: React.FC = () => {
               <PlusCircle className="w-24 h-24 text-[#00236f]" />
             </div>
             
-            <h2 className="text-xl font-bold text-[#00236f] mb-8 flex items-center gap-3 uppercase tracking-widest" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+            <h2 className="text-xl font-bold text-[#00236f] mb-8 flex items-center gap-3 uppercase tracking-widest font-bebas">
               Quick Directives
             </h2>
             <div className="flex flex-col space-y-4">
@@ -172,7 +172,7 @@ const Dashboard: React.FC = () => {
 
           
           <div className="bg-white/40 backdrop-blur-2xl rounded-[40px] shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] p-8 border border-white/60 relative overflow-hidden">
-            <h2 className="text-xl font-bold text-[#00236f] mb-6 flex items-center gap-3 uppercase tracking-widest" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+            <h2 className="text-xl font-bold text-[#00236f] mb-6 flex items-center gap-3 uppercase tracking-widest font-bebas">
               <Palmtree className="w-6 h-6 text-emerald-500" /> OUT OF OFFICE TODAY
             </h2>
             
@@ -194,7 +194,7 @@ const Dashboard: React.FC = () => {
                 {activeAbsences.map((absence: any) => (
                   <div key={absence.id} className="flex items-center justify-between p-3.5 bg-gray-50/50 hover:bg-[#dce1ff]/10 rounded-2xl border border-gray-100/50 transition-all duration-300">
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-xl bg-[#00236f]/5 text-[#00236f] flex items-center justify-center text-xs font-black" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                      <div className="w-9 h-9 rounded-xl bg-[#00236f]/5 text-[#00236f] flex items-center justify-center text-xs font-black font-bebas">
                         {absence.applicant?.firstName?.charAt(0)}{absence.applicant?.lastName?.charAt(0)}
                       </div>
                       <div>

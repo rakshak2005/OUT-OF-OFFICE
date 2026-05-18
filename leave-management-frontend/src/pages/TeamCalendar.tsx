@@ -107,7 +107,7 @@ const TeamCalendar: React.FC = () => {
         <div>
           <div className="flex items-center gap-3 mb-2">
             <div className="w-2 h-8 bg-[#00236f] rounded-full" />
-            <h1 className="text-5xl font-bold text-[#00236f] uppercase tracking-tight" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+            <h1 className="text-5xl font-bold text-[#00236f] uppercase tracking-tight font-bebas">
               TEAM LEAVE PLANNER
             </h1>
           </div>
@@ -122,7 +122,7 @@ const TeamCalendar: React.FC = () => {
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
-          <span className="text-xl font-bold text-[#00236f] uppercase tracking-widest min-w-[140px] text-center" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <span className="text-xl font-bold text-[#00236f] uppercase tracking-widest min-w-[140px] text-center font-bebas">
             {format(currentDate, 'MMMM yyyy')}
           </span>
           <button 
@@ -233,7 +233,7 @@ const TeamCalendar: React.FC = () => {
         <div className="space-y-6">
           <div className="bg-white rounded-[40px] shadow-xl shadow-blue-900/5 p-8 border border-gray-50 relative overflow-hidden h-full flex flex-col justify-between">
             <div>
-              <h2 className="text-xl font-bold text-[#00236f] mb-6 flex items-center gap-3 uppercase tracking-widest" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+              <h2 className="text-xl font-bold text-[#00236f] mb-6 flex items-center gap-3 uppercase tracking-widest font-bebas">
                 <ClipboardList className="w-6 h-6 text-[#00236f]" /> UPCOMING ABSENCES
               </h2>
 

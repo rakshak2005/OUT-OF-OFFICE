@@ -9,7 +9,7 @@ const LandingView: React.FC = () => {
       
       <header className="fixed top-0 left-0 w-full z-10 bg-[#faf8ff]/80 backdrop-blur-md border-b border-gray-100 px-6 md:px-10 py-3 max-w-7xl mx-auto left-0 right-0 flex justify-between items-center">
         <div className="flex items-center gap-6">
-          <div className="font-bold text-lg tracking-tight text-[#00236f] flex items-center gap-2 group" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <div className="font-bold text-lg tracking-tight text-[#00236f] flex items-center gap-2 group font-bebas">
             <div className="w-7 h-7 bg-[#00236f] rounded-lg flex items-center justify-center transition-transform group-hover:scale-105 shadow-md shadow-blue-900/10">
               <span className="text-white text-lg font-bold">O</span>
             </div>
@@ -25,12 +25,12 @@ const LandingView: React.FC = () => {
             <span className="text-[9px] font-black uppercase tracking-[0.2em]">New Features Available</span>
           </div>
 
-          <div className="flex flex-col items-center mb-6" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <div className="flex flex-col items-center mb-6 font-bebas">
             <span className="text-[70px] md:text-[90px] leading-none font-bold text-[#00236f] tracking-widest drop-shadow-sm select-none">O.O.O</span>
             <span className="text-xs tracking-[0.6em] pl-[0.6em] text-[#444651] font-medium mt-1 uppercase text-center opacity-60">Out of Office</span>
           </div>
 
-          <h1 className="mb-6 max-w-xl" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h1 className="mb-6 max-w-xl font-bebas">
             <span className="block text-3xl md:text-4xl font-bold tracking-[0.15em] text-[#00236f] uppercase leading-none">
               Simplify Leave Management
             </span>

@@ -47,12 +47,12 @@ const Welcome: React.FC = () => {
         <section className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col items-center text-center py-8 lg:py-12">
 
 
-          <div className="flex flex-col items-center mb-6" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <div className="flex flex-col items-center mb-6 font-bebas">
             <span className="text-[70px] md:text-[90px] leading-none font-bold text-[#00236f] tracking-widest drop-shadow-sm select-none">O.O.O</span>
             <span className="text-xs tracking-[0.6em] pl-[0.6em] text-[#444651] font-medium mt-1 uppercase text-center opacity-60">Out of Office</span>
           </div>
 
-          <h1 className="mb-6 max-w-xl" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h1 className="mb-6 max-w-xl font-bebas">
             <span className="block text-3xl md:text-4xl font-bold tracking-[0.15em] text-[#00236f] uppercase leading-none">
               Simplify Leave Management
             </span>
@@ -136,7 +136,7 @@ const Welcome: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#00236f]/90 via-[#00236f]/30 to-transparent flex items-end p-8 md:p-12">
               <div className="text-white max-w-xl">
 
-                <h2 className="text-3xl md:text-4xl font-bold mb-3 leading-tight tracking-widest uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Experience Clarity in HR Operations</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-3 leading-tight tracking-widest uppercase font-bebas">Experience Clarity in HR Operations</h2>
                 <p className="text-sm md:text-base font-medium opacity-80 leading-relaxed max-w-lg">
                   Our platform integrates seamlessly with your existing tools, providing a single source of truth for all employee absence management.
                 </p>

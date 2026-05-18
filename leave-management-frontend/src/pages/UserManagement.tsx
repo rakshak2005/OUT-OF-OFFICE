@@ -262,7 +262,7 @@ const UserManagement: React.FC = () => {
         <div>
           <div className="flex items-center gap-3 mb-2">
             <div className="w-2 h-8 bg-[#00236f] rounded-full" />
-            <h1 className="text-5xl font-bold text-[#00236f] uppercase tracking-tight" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+            <h1 className="text-5xl font-bold text-[#00236f] uppercase tracking-tight font-bebas">
               RESOURCE DIRECTORY
             </h1>
           </div>
@@ -283,7 +283,7 @@ const UserManagement: React.FC = () => {
           <div key={dept} className="bg-white rounded-[40px] shadow-xl shadow-blue-900/5 p-8 border border-gray-50">
             <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
               <Palmtree className="w-6 h-6 text-emerald-500" />
-              <h2 className="text-2xl font-black text-[#00236f] uppercase tracking-widest" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+              <h2 className="text-2xl font-black text-[#00236f] uppercase tracking-widest font-bebas">
                 {dept} Segment ({groupedUsers[dept].length})
               </h2>
             </div>
@@ -363,11 +363,11 @@ const UserManagement: React.FC = () => {
             
             <div className="bg-[#00236f] p-8 flex justify-between items-center text-white">
               <div className="flex items-center gap-6">
-                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-2xl font-bold" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-2xl font-bold font-bebas">
                   {selectedUser.firstName.charAt(0)}{selectedUser.lastName.charAt(0)}
                 </div>
                 <div>
-                  <h2 className="text-3xl font-bold uppercase tracking-widest" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                  <h2 className="text-3xl font-bold uppercase tracking-widest font-bebas">
                     {selectedUser.firstName} {selectedUser.lastName}
                   </h2>
                   <p className="text-[10px] font-black uppercase tracking-widest opacity-60">Leave History & Balance Adjuster</p>
@@ -498,7 +498,7 @@ const UserManagement: React.FC = () => {
                             l.status === 'cancelled' ? 'bg-gray-300' : 'bg-rose-500'
                           }`} />
                           <div>
-                            <h4 className="text-lg font-bold text-[#00236f] uppercase tracking-wider" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                            <h4 className="text-lg font-bold text-[#00236f] uppercase tracking-wider font-bebas">
                               {typeof l.leaveType === 'string' ? l.leaveType : l.leaveType?.name} LEAVE
                             </h4>
                             <p className="text-[9px] font-black text-gray-400 uppercase tracking-widest">{format(new Date(l.fromDate), 'MMM dd, yyyy')} — {format(new Date(l.toDate), 'MMM dd, yyyy')}</p>
@@ -564,7 +564,7 @@ const UserManagement: React.FC = () => {
                   <Plus className="w-6 h-6" />
                 </div>
                 <div>
-                  <h2 className="text-3xl font-bold uppercase tracking-widest" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                  <h2 className="text-3xl font-bold uppercase tracking-widest font-bebas">
                     ADD NEW PERSONNEL
                   </h2>
                   <p className="text-[10px] font-black uppercase tracking-widest opacity-60">Provision account and segments</p>
