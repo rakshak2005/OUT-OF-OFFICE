@@ -137,7 +137,7 @@ const Dashboard: React.FC = () => {
             <div className="flex flex-col space-y-4">
               <Button
                 onClick={() => navigate('/app/apply-leave')}
-                className="w-full bg-[#1e3a8a]/80 backdrop-blur-md hover:bg-[#00236f]/90 text-white py-6 rounded-2xl font-bold shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all flex items-center justify-center gap-3 border border-blue-400/30 text-xs uppercase tracking-widest"
+                className="w-full bg-blue-600/70 backdrop-blur-xl hover:bg-blue-600/80 text-white py-6 rounded-2xl font-bold shadow-[0_8px_32px_0_rgba(31,38,135,0.2)] hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.3)] hover:-translate-y-1 transition-all flex items-center justify-center gap-3 border border-white/30 text-xs uppercase tracking-widest"
               >
                 <PlusCircle className="w-5 h-5" />
                 Draft Request
@@ -145,7 +145,7 @@ const Dashboard: React.FC = () => {
               
               <button
                 onClick={() => navigate('/app/my-leaves')}
-                className="w-full py-5 bg-white/40 backdrop-blur-md text-[#00236f] rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:bg-white/60 transition-all border border-white/60 shadow-[0_4px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full py-5 bg-white/50 backdrop-blur-xl text-[#00236f] rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:bg-white/70 transition-all border border-white/60 shadow-[0_8px_32px_0_rgba(31,38,135,0.1)] hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] flex items-center justify-center gap-2 cursor-pointer hover:-translate-y-0.5"
               >
                 <Calendar className="w-4 h-4 opacity-40" />
                 History & Logs
@@ -154,7 +154,7 @@ const Dashboard: React.FC = () => {
               {(user?.role === 'manager' || user?.role === 'hr' || user?.role === 'admin') && (
                 <button
                   onClick={() => navigate('/app/approve-leaves')}
-                  className="w-full py-5 bg-white/40 backdrop-blur-md text-[#00236f] rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:bg-white/60 transition-all border border-white/60 shadow-[0_4px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-5 bg-white/50 backdrop-blur-xl text-[#00236f] rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:bg-white/70 transition-all border border-white/60 shadow-[0_8px_32px_0_rgba(31,38,135,0.1)] hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] flex items-center justify-center gap-2 cursor-pointer hover:-translate-y-0.5"
                 >
                   <CheckCircle className="w-4 h-4 opacity-40" />
                   Approval Desk

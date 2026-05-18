@@ -249,7 +249,7 @@ const ApproveLeaves: React.FC = () => {
                         <button
                           onClick={() => handleReject(leave.id)}
                           disabled={actionLoading === leave.id}
-                          className="bg-rose-500 text-white px-8 py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest shadow-lg shadow-rose-900/20 hover:bg-rose-600 transition-all flex-1"
+                          className="flex-1 bg-rose-500/70 backdrop-blur-xl border border-white/30 text-white px-8 py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest shadow-[0_8px_32px_0_rgba(225,29,72,0.2)] hover:bg-rose-500/80 hover:shadow-[0_8px_32px_0_rgba(225,29,72,0.3)] transition-all hover:-translate-y-0.5"
                         >
                           {actionLoading === leave.id ? 'DENYING...' : 'CONFIRM DENIAL'}
                         </button>
@@ -258,7 +258,7 @@ const ApproveLeaves: React.FC = () => {
                             setRejectingId(null);
                             setRejectionReason('');
                           }}
-                          className="bg-gray-100 text-[#444651] px-8 py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest hover:bg-gray-200 transition-all"
+                          className="bg-white/50 backdrop-blur-xl border border-white/60 text-[#00236f] px-8 py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest shadow-[0_8px_32px_0_rgba(31,38,135,0.1)] hover:bg-white/70 hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] transition-all hover:-translate-y-0.5"
                         >
                           ABORT
                         </button>
@@ -269,14 +269,14 @@ const ApproveLeaves: React.FC = () => {
                       <button
                         onClick={() => handleApprove(leave.id)}
                         disabled={actionLoading === leave.id}
-                        className="flex-[2] bg-emerald-500 text-white px-8 py-4 rounded-2xl font-bold text-[10px] uppercase tracking-widest shadow-xl shadow-emerald-900/10 hover:bg-emerald-600 hover:-translate-y-1 active:translate-y-0 transition-all"
+                        className="flex-[2] bg-emerald-500/70 backdrop-blur-xl border border-white/30 text-white px-8 py-4 rounded-2xl font-bold text-[10px] uppercase tracking-widest shadow-[0_8px_32px_0_rgba(16,185,129,0.2)] hover:bg-emerald-500/80 hover:shadow-[0_8px_32px_0_rgba(16,185,129,0.3)] transition-all hover:-translate-y-1 active:translate-y-0"
                       >
                         {actionLoading === leave.id ? 'AUTHORIZING...' : 'AUTHORIZE REQUEST'}
                       </button>
                       <button
                         onClick={() => setRejectingId(leave.id)}
                         disabled={actionLoading === leave.id}
-                        className="flex-1 bg-gray-50 text-[#444651] px-8 py-4 rounded-2xl font-bold text-[10px] uppercase tracking-widest border border-gray-100 hover:bg-rose-50 hover:text-rose-600 hover:border-rose-100 transition-all"
+                        className="flex-1 bg-white/50 backdrop-blur-xl border border-white/60 text-[#00236f] px-8 py-4 rounded-2xl font-bold text-[10px] uppercase tracking-widest shadow-[0_8px_32px_0_rgba(31,38,135,0.1)] hover:bg-rose-500/20 hover:text-rose-700 hover:border-rose-300 hover:shadow-[0_8px_32px_0_rgba(225,29,72,0.15)] transition-all hover:-translate-y-1"
                       >
                         DENY
                       </button>

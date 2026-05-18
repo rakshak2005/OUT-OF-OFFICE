@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
               
               <button
                 onClick={handleLogout}
-                className="w-10 h-10 flex items-center justify-center rounded-2xl bg-gray-50 text-[#444651] hover:bg-rose-50 hover:text-rose-600 transition-all active:scale-90 border border-gray-100"
+                className="w-10 h-10 flex items-center justify-center rounded-2xl bg-rose-500/10 backdrop-blur-xl border border-rose-200/50 text-rose-600 shadow-[0_4px_20px_0_rgba(225,29,72,0.1)] hover:bg-rose-500/20 hover:shadow-[0_8px_32px_0_rgba(225,29,72,0.2)] hover:-translate-y-0.5 transition-all active:scale-90"
                 title="Secure Logout"
               >
                 <LogOut className="w-4 h-4" />

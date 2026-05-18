@@ -211,7 +211,7 @@ const ApplyLeave: React.FC = () => {
                   setShowAiAssist(!showAiAssist);
                   setAiSuggestion('');
                 }}
-                className="bg-[#dce1ff]/60 hover:bg-[#dce1ff] text-[#00236f] px-2.5 py-1 rounded-lg text-[9px] font-black uppercase tracking-widest transition-all flex items-center gap-1 border-none cursor-pointer"
+                className="bg-blue-500/20 backdrop-blur-md hover:bg-blue-500/30 text-[#00236f] px-2.5 py-1 rounded-lg text-[9px] font-bold uppercase tracking-widest transition-all flex items-center gap-1 border border-blue-400/30 cursor-pointer shadow-[0_4px_12px_rgba(31,38,135,0.05)] hover:shadow-[0_4px_12px_rgba(31,38,135,0.1)]"
               >
                 <span>✨ AI Sentence Assist</span>
               </button>
@@ -258,7 +258,7 @@ const ApplyLeave: React.FC = () => {
                   type="button"
                   onClick={handleAiAssist}
                   disabled={aiLoading}
-                  className="bg-[#00236f] hover:bg-[#1e3a8a] text-white px-4 py-2 rounded-xl font-bold text-[9px] uppercase tracking-widest transition-all border-none cursor-pointer flex items-center gap-1.5 shadow-md shadow-blue-900/5"
+                  className="bg-blue-600/70 backdrop-blur-xl hover:bg-blue-600/80 text-white px-4 py-2 rounded-xl font-bold text-[9px] uppercase tracking-widest transition-all border border-white/30 cursor-pointer flex items-center gap-1.5 shadow-[0_8px_32px_0_rgba(31,38,135,0.2)] hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.3)] hover:-translate-y-0.5"
                 >
                   {aiLoading ? 'Analyzing...' : '✨ Auto-Formulate'}
                 </button>
@@ -279,14 +279,14 @@ const ApplyLeave: React.FC = () => {
                         setAiSuggestion('');
                         toast.success('AI Suggestion applied successfully!');
                       }}
-                      className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl font-bold text-[9px] uppercase tracking-widest transition-all border-none cursor-pointer"
+                      className="bg-emerald-500/70 backdrop-blur-xl hover:bg-emerald-500/80 text-white px-4 py-2 rounded-xl font-bold text-[9px] uppercase tracking-widest transition-all border border-white/30 cursor-pointer shadow-[0_8px_32px_0_rgba(16,185,129,0.2)] hover:shadow-[0_8px_32px_0_rgba(16,185,129,0.3)] hover:-translate-y-0.5"
                     >
                       Apply Suggestion
                     </button>
                     <button
                       type="button"
                       onClick={() => setAiSuggestion('')}
-                      className="bg-gray-100 text-[#444651] px-4 py-2 rounded-xl font-bold text-[9px] uppercase tracking-widest hover:bg-gray-200 transition-all border-none cursor-pointer"
+                      className="bg-white/50 backdrop-blur-xl text-[#00236f] px-4 py-2 rounded-xl font-bold text-[9px] uppercase tracking-widest hover:bg-white/70 transition-all border border-white/60 cursor-pointer shadow-[0_8px_32px_0_rgba(31,38,135,0.1)] hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] hover:-translate-y-0.5"
                     >
                       Clear
                     </button>
@@ -331,7 +331,7 @@ const ApplyLeave: React.FC = () => {
             <button
               type="submit"
               disabled={loading}
-              className="bg-[#1e3a8a] hover:bg-[#00236f] text-white px-6 py-2.5 rounded-xl font-bold shadow-lg shadow-blue-900/10 hover:shadow-xl hover:-translate-y-0.5 active:scale-95 transition-all flex items-center justify-center gap-1.5 border-none text-[9px] uppercase tracking-widest"
+              className="bg-blue-600/70 backdrop-blur-xl hover:bg-blue-600/80 text-white px-6 py-2.5 rounded-xl font-bold shadow-[0_8px_32px_0_rgba(31,38,135,0.2)] hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.3)] hover:-translate-y-0.5 active:scale-95 transition-all flex items-center justify-center gap-1.5 border border-white/30 text-[9px] uppercase tracking-widest"
             >
               {loading ? 'Submitting...' : 'Submit'}
               <ArrowRight className="w-3.5 h-3.5" />
@@ -339,7 +339,7 @@ const ApplyLeave: React.FC = () => {
             <button
               type="button"
               onClick={() => navigate('/app/dashboard')}
-              className="bg-gray-50 text-[#444651] px-6 py-2.5 rounded-xl font-bold text-[9px] uppercase tracking-widest hover:bg-gray-100 active:scale-95 transition-all"
+              className="bg-white/50 backdrop-blur-xl text-[#00236f] px-6 py-2.5 rounded-xl font-bold text-[9px] uppercase tracking-widest hover:bg-white/70 active:scale-95 transition-all shadow-[0_8px_32px_0_rgba(31,38,135,0.1)] hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] hover:-translate-y-0.5 border border-white/60"
             >
               Cancel
             </button>
