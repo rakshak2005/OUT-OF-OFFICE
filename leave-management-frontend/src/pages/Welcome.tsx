@@ -66,13 +66,13 @@ const Welcome: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 mb-20 w-full sm:w-auto">
             <Link to="/register" className="w-full sm:w-auto">
-              <Button className="w-full bg-[#1e3a8a]/80 backdrop-blur-md hover:bg-[#00236f]/90 text-white px-8 py-4 rounded-xl font-bold shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 border border-blue-400/30 text-sm">
+              <Button className="w-full bg-blue-600/70 backdrop-blur-xl hover:bg-blue-600/80 text-white px-8 py-4 rounded-xl font-bold shadow-[0_8px_32px_0_rgba(31,38,135,0.2)] hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.3)] hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 border border-white/30 text-sm">
                 REGISTER
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
             <Link to="/login" className="w-full sm:w-auto">
-              <button className="w-full px-8 py-4 bg-white/40 backdrop-blur-md text-[#1e3a8a] border border-white/60 rounded-xl font-bold text-sm hover:bg-white/60 transition-all shadow-[0_4px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] flex items-center justify-center gap-2">
+              <button className="w-full px-8 py-4 bg-white/50 backdrop-blur-xl text-[#00236f] border border-white/60 rounded-xl font-bold text-sm hover:bg-white/70 transition-all shadow-[0_8px_32px_0_rgba(31,38,135,0.1)] hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] hover:-translate-y-0.5 flex items-center justify-center gap-2">
                 <PlayCircle className="w-4 h-4" />
                 SIGN IN
               </button>

@@ -188,7 +188,7 @@ const Register: React.FC = () => {
 
             <Button 
               type="submit" 
-              className="w-full bg-[#1e3a8a]/80 backdrop-blur-md hover:bg-[#00236f]/90 text-white py-4 rounded-xl font-bold shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 border border-blue-400/30 text-xs uppercase tracking-widest mt-6" 
+              className="w-full bg-blue-600/70 backdrop-blur-xl hover:bg-blue-600/80 text-white py-4 rounded-xl font-bold shadow-[0_8px_32px_0_rgba(31,38,135,0.2)] hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.3)] hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 border border-white/30 text-xs uppercase tracking-widest mt-6" 
               disabled={loading}
             >
               {loading ? (

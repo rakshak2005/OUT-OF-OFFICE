@@ -16,10 +16,10 @@ const Button: React.FC<ButtonProps> = ({
   const baseStyles = 'font-semibold rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed';
 
   const variants = {
-    primary: 'bg-blue-600/80 backdrop-blur-md border border-blue-400/30 text-white shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:bg-blue-600/90 active:bg-blue-700/90',
-    secondary: 'bg-white/30 backdrop-blur-md border border-white/50 text-[#00236f] shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:bg-white/50 active:bg-white/60',
-    danger: 'bg-red-500/80 backdrop-blur-md border border-red-400/30 text-white shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:bg-red-500/90 active:bg-red-600/90',
-    success: 'bg-green-500/80 backdrop-blur-md border border-green-400/30 text-white shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:bg-green-500/90 active:bg-green-600/90',
+    primary: 'bg-blue-500/70 backdrop-blur-xl border border-white/30 text-white shadow-[0_8px_32px_0_rgba(31,38,135,0.2)] hover:bg-blue-500/80 hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.3)] hover:-translate-y-0.5 active:bg-blue-600/80',
+    secondary: 'bg-white/50 backdrop-blur-xl border border-white/60 text-[#00236f] shadow-[0_8px_32px_0_rgba(31,38,135,0.1)] hover:bg-white/70 hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] hover:-translate-y-0.5 active:bg-white/80',
+    danger: 'bg-rose-500/70 backdrop-blur-xl border border-white/30 text-white shadow-[0_8px_32px_0_rgba(225,29,72,0.2)] hover:bg-rose-500/80 hover:shadow-[0_8px_32px_0_rgba(225,29,72,0.3)] hover:-translate-y-0.5 active:bg-rose-600/80',
+    success: 'bg-emerald-500/70 backdrop-blur-xl border border-white/30 text-white shadow-[0_8px_32px_0_rgba(16,185,129,0.2)] hover:bg-emerald-500/80 hover:shadow-[0_8px_32px_0_rgba(16,185,129,0.3)] hover:-translate-y-0.5 active:bg-emerald-600/80',
   };
 
   const sizes = {
