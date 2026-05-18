@@ -1,15 +1,21 @@
 .counter {
   font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 8px 16px;
+  border-radius: 8px;
   color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s ease;
   margin-bottom: 24px;
 
   &:hover {
+    background: var(--glass-hover-bg);
     border-color: var(--accent-border);
+    box-shadow: var(--glass-hover-shadow);
+    transform: translateY(-2px);
   }
 
   &:focus-visible {
@@ -71,12 +77,25 @@
 
 #next-steps {
   display: flex;
-  border-top: 1px solid var(--border);
   text-align: left;
+  gap: 24px;
+  padding: 24px;
 
   &>div {
     flex: 1 1 0;
     padding: 32px;
+    background: var(--glass-card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: var(--glass-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--glass-hover-shadow);
+    }
 
     @media (max-width: 1024px) {
       padding: 24px 20px;
@@ -92,17 +111,12 @@
   @media (max-width: 1024px) {
     flex-direction: column;
     text-align: center;
+    gap: 24px;
+    padding: 16px;
   }
 }
 
-#docs {
-  border-right: 1px solid var(--border);
 
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-}
 
 #next-steps ul {
   list-style: none;
@@ -118,17 +132,24 @@
   a {
     color: var(--text-h);
     font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
+    border-radius: 8px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
     display: flex;
-    padding: 6px 12px;
+    padding: 8px 16px;
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    transition: box-shadow 0.3s;
+    transition: all 0.3s ease;
 
     &:hover {
-      box-shadow: var(--shadow);
+      background: var(--glass-hover-bg);
+      border-color: var(--accent-border);
+      box-shadow: var(--glass-hover-shadow);
+      transform: translateY(-2px);
     }
 
     .button-icon {
