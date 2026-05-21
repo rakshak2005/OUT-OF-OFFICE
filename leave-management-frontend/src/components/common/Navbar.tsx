@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
                 </Link>
               ))}
 
-              {(user?.role === 'manager' || user?.role === 'hr') && (
+              {(user?.role === 'manager' || user?.role === 'hr' || user?.role === 'admin') && (
                 <Link
                   to="/app/approve-leaves"
                   className="flex items-center gap-2 px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest text-[#444651] hover:text-[#00236f] hover:bg-blue-50/50 transition-all active:scale-95"

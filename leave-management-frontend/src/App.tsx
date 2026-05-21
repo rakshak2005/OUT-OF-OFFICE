@@ -63,7 +63,7 @@ function App() {
             <Route
               path="approve-leaves"
               element={
-                <ProtectedRoute allowedRoles={['manager', 'hr']}>
+                <ProtectedRoute allowedRoles={['manager', 'hr', 'admin']}>
                   <ApproveLeaves />
                 </ProtectedRoute>
               }

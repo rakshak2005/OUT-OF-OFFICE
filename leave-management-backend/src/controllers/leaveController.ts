@@ -45,8 +45,9 @@ export const applyLeave = async (req: AuthRequest, res: Response) => {
     const { leaveType, startDate: fromDate, endDate: toDate, reason, document, documentName } = req.body;
     const userId = req.user.id;
 
+    const dialect = process.env.SEQUELIZE_DIALECT || 'postgres';
     const typeRecord = await LeaveType.findOne({
-      where: { name: { [Op.iLike]: `%${leaveType}%` } }
+      where: { name: { [dialect === 'sqlite' ? Op.like : Op.iLike]: `%${leaveType}%` } }
     });
 
     if (!typeRecord) {
@@ -264,7 +265,7 @@ export const getPendingLeaves = async (req: AuthRequest, res: Response) => {
         {
           model: User,
           as: 'applicant',
-          attributes: ['firstName', 'lastName', 'email', 'department'],
+          attributes: ['id', 'firstName', 'lastName', 'email', 'department'],
           include: [
             {
               model: Leave,

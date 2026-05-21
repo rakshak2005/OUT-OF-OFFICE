@@ -21,9 +21,9 @@ const router = express.Router();
 
 router.post('/', protect, applyLeave);
 router.get('/my', protect, getMyLeaves);
-router.get('/team', protect, authorize('manager', 'hr'), getAllLeaves);
-router.patch('/:id/approve', protect, authorize('manager', 'hr'), (req, res, next) => { req.body.status = 'approved'; next(); }, updateLeaveStatus);
-router.patch('/:id/reject', protect, authorize('manager', 'hr'), (req, res, next) => { req.body.status = 'rejected'; next(); }, updateLeaveStatus);
+router.get('/team', protect, authorize('manager', 'hr', 'admin'), getAllLeaves);
+router.patch('/:id/approve', protect, authorize('manager', 'hr', 'admin'), (req, res, next) => { req.body.status = 'approved'; next(); }, updateLeaveStatus);
+router.patch('/:id/reject', protect, authorize('manager', 'hr', 'admin'), (req, res, next) => { req.body.status = 'rejected'; next(); }, updateLeaveStatus);
 router.delete('/:id', protect, deleteLeave);
 router.get('/balance', protect, getMyBalances);
 
@@ -34,9 +34,9 @@ router.get('/team-calendar', protect, getTeamCalendarLeaves);
 router.get('/detail/:id', protect, getLeaveById);
 router.get('/my-leaves', protect, getMyLeaves);
 router.get('/stats', protect, getLeaveStats);
-router.get('/all', protect, authorize('manager', 'hr'), getAllLeaves);
-router.get('/pending', protect, authorize('manager', 'hr'), getPendingLeaves);
+router.get('/all', protect, authorize('manager', 'hr', 'admin'), getAllLeaves);
+router.get('/pending', protect, authorize('manager', 'hr', 'admin'), getPendingLeaves);
 router.put('/:id/cancel', protect, cancelLeave);
-router.put('/:id', protect, authorize('manager', 'hr'), updateLeaveStatus);
+router.put('/:id', protect, authorize('manager', 'hr', 'admin'), updateLeaveStatus);
 
 export default router;
